@@ -11,16 +11,12 @@ public class Grid {
 	private int height = 400;
 	private int nbCelsHeight=40;
 	private int nbCelsWidth=60;
-	private Elements elements[][] = new Elements[60][40];
+	
 	
 	
 	public Grid () {
-		this.rider1= new Rider(2,2,Color.RED,Direction.EST);
-		this.rider1= new Rider(2,2,Color.RED,Direction.EST);
-		
-		
-		
+		this.rider1= new Rider(2,2,Color.red,Direction.EST);
+		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST);
 	}
 	
-
 }
