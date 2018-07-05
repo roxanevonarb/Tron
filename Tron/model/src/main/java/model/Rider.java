@@ -35,11 +35,6 @@ public void move() {
 	}
 	grid.checkColision(this);
 	
-	
-	
-	
-	
-	
 }
 
 
