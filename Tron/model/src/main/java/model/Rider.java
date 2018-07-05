@@ -3,9 +3,9 @@ package model;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public class Rider extends Elements{
+public class Rider extends Elements implements IRider{
 	private Direction direction;
-	private ArrayList<Particles> particles = new ArrayList<Particles>();
+	public ArrayList<IElements> particles = new ArrayList<IElements>();
 	boolean alive = true;
 	public Grid grid;
 
@@ -54,16 +54,14 @@ public void setAlive(boolean alive) {
 
 
 
-public ArrayList<Particles> getParticles() {
+@Override
+public ArrayList<IElements> getParticles() {
+	// TODO Auto-generated method stub
 	return particles;
 }
 
 
 
-
-public void setParticles(ArrayList<Particles> particles) {
-	this.particles = particles;
-}
 
 	
 

@@ -2,11 +2,11 @@ package model;
 
 import java.awt.Color;
 
-public class Grid {
+public class Grid implements IGrid{
 	
 	
-	private Rider rider1;
-	private Rider rider2;
+	private IRider rider1;
+	private IRider rider2;
 	private int width = 600;
 	private int height = 400;
 	private int nbCelsHeight=40;
@@ -23,11 +23,11 @@ public class Grid {
 	public boolean checkColision(Rider rider) {
 		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCelsHeight) {rider.setAlive(false); return true;} 
 		
-		for (Particles particle : rider1.getParticles()) {
+		for (IElements particle : rider1.getParticles()) {
 			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
 		}
 		
-		for (Particles particle : rider2.getParticles()) {
+		for (IElements particle : rider2.getParticles()) {
 			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
 	
 	}
@@ -35,18 +35,18 @@ public class Grid {
 	
 }
 
-
-	public Rider getRider1() {
+	@Override
+	public IRider getRider1() {
 		return rider1;
 	}
 
-
+	
 	public void setRider1(Rider rider1) {
 		this.rider1 = rider1;
 	}
 
-
-	public Rider getRider2() {
+	@Override
+	public IRider getRider2() {
 		return rider2;
 	}
 
@@ -55,7 +55,7 @@ public class Grid {
 		this.rider2 = rider2;
 	}
 
-
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -65,7 +65,7 @@ public class Grid {
 		this.width = width;
 	}
 
-
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -75,7 +75,7 @@ public class Grid {
 		this.height = height;
 	}
 
-
+	@Override
 	public int getNbCelsHeight() {
 		return nbCelsHeight;
 	}
@@ -85,7 +85,7 @@ public class Grid {
 		this.nbCelsHeight = nbCelsHeight;
 	}
 
-
+	@Override
 	public int getNbCelsWidth() {
 		return nbCelsWidth;
 	}
