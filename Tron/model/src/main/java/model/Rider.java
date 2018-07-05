@@ -13,6 +13,7 @@ public Rider(int x, int y, Color color , Direction direction) {
 	}
 private Direction direction;
 private ArrayList<Particles> particles = new ArrayList<Particles>();
+boolean alive = true;
 	
 	
 	
