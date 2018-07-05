@@ -2,7 +2,7 @@ package model;
 
 import java.awt.Color;
 
-public class Elements {
+public class Elements implements IElements{
 	
 	public Elements(int x, int y, Color color) {
 		this.x=x;
