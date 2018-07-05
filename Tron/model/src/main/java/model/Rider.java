@@ -59,8 +59,16 @@ public ArrayList<IElements> getParticles() {
 	// TODO Auto-generated method stub
 	return particles;
 }
-
-
+@Override
+public void turnRight() {
+	this.direction = this.direction.getNext();
+	
+}
+@Override
+public void turnLeft() {
+	this.direction = this.direction.getNext().getNext().getNext();
+	
+}
 
 
 	

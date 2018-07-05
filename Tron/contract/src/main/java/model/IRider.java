@@ -7,6 +7,8 @@ public interface IRider extends IElements{
 	public void move();
 
 	public ArrayList<IElements> getParticles();
+	public void turnLeft();
+	public void turnRight();
 
 	
 	
