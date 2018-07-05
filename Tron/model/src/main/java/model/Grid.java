@@ -34,4 +34,73 @@ public class Grid {
 		return false;
 	
 }
+
+
+	public Rider getRider1() {
+		return rider1;
+	}
+
+
+	public void setRider1(Rider rider1) {
+		this.rider1 = rider1;
+	}
+
+
+	public Rider getRider2() {
+		return rider2;
+	}
+
+
+	public void setRider2(Rider rider2) {
+		this.rider2 = rider2;
+	}
+
+
+	public int getWidth() {
+		return width;
+	}
+
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+
+	public int getHeight() {
+		return height;
+	}
+
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+
+	public int getNbCelsHeight() {
+		return nbCelsHeight;
+	}
+
+
+	public void setNbCelsHeight(int nbCelsHeight) {
+		this.nbCelsHeight = nbCelsHeight;
+	}
+
+
+	public int getNbCelsWidth() {
+		return nbCelsWidth;
+	}
+
+
+	public void setNbCelsWidth(int nbCelsWidth) {
+		this.nbCelsWidth = nbCelsWidth;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
