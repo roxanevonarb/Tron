@@ -33,6 +33,7 @@ public void move() {
 	default:
 		break;
 	}
+	grid.checkColision(this);
 	
 	
 	
