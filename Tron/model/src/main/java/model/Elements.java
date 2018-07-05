@@ -11,8 +11,9 @@ public class Elements {
 	}
 	
 	
-	private int x,y;
-	Color color;
+	protected int x;
+	protected int y;
+	protected Color color;
 	
 	
 	

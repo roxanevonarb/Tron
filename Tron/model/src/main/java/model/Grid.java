@@ -15,8 +15,23 @@ public class Grid {
 	
 	
 	public Grid () {
-		this.rider1= new Rider(2,2,Color.red,Direction.EST);
-		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST);
+		this.rider1= new Rider(2,2,Color.red,Direction.EST,this);
+		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST,this);
 	}
 	
+	
+	public boolean checkColision(Rider rider) {
+		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCelsHeight) {rider.setAlive(false); return true;} 
+		
+		for (Particles particle : rider1.getParticles()) {
+			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
+		}
+		
+		for (Particles particle : rider2.getParticles()) {
+			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
+	
+	}
+		return false;
+	
+}
 }
