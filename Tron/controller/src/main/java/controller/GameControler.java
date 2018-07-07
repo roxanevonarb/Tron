@@ -21,7 +21,7 @@ public class GameControler implements IController {
 	
 	public void play(){
 		
-		while(model.getGrid().getRider1().isAlive() && model.getGrid().getRider1().isAlive()) {
+		while(model.getGrid().getRider1().isAlive() && model.getGrid().getRider2().isAlive()) {
 			model.getGrid().getRider1().move();
 			if(model.getGrid().getRider1().isAlive() == false)
 				this.view.displayMessage("Rider 2 Win (Blue)");
@@ -30,7 +30,7 @@ public class GameControler implements IController {
 			
 			
 			model.getGrid().getRider2().move();
-			if(model.getGrid().getRider1().isAlive() == false)
+			if(model.getGrid().getRider2().isAlive() == false)
 				this.view.displayMessage("Rider 1 Win (Red) ");
 			try {
 				Thread.sleep(150);

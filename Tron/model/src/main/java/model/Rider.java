@@ -38,6 +38,7 @@ public void move() {
 	this.setChanged();
 	this.notifyObservers();
 	
+	
 }
 
 
