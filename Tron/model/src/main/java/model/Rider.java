@@ -65,20 +65,20 @@ public ArrayList<IElements> getParticles() {
 @Override
 public void turnRight() {
 	switch(this.direction) {
-	case NORD: direction = Direction.EST;
-	case EST: direction = Direction.SUD;
-	case SUD: direction = Direction.OUEST;
-	case OUEST: direction = Direction.NORD;
+	case NORD: direction = Direction.EST;break;
+	case EST: direction = Direction.SUD;break;
+	case SUD: direction = Direction.OUEST;break;
+	case OUEST: direction = Direction.NORD;break;
 	}
 	
 }
 @Override
 public void turnLeft() {
 		switch(this.direction) {
-		case NORD: direction = Direction.OUEST;
-		case EST: direction = Direction.NORD;
-		case SUD: direction = Direction.EST;
-		case OUEST: direction = Direction.SUD;
+		case NORD: direction = Direction.OUEST;break;
+		case EST: direction = Direction.NORD;break;
+		case SUD: direction = Direction.EST;break;
+		case OUEST: direction = Direction.SUD;break;
 		}
 	
 }

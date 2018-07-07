@@ -10,6 +10,8 @@ public interface IRider extends IElements{
 	public void turnLeft();
 	public void turnRight();
 
+	public boolean isAlive();
+
 	
 	
 }

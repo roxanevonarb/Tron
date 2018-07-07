@@ -67,8 +67,8 @@ public class Frame extends JFrame implements KeyListener, IView {
   	switch(keyEvent.getKeyCode()) {
   	case KeyEvent.VK_RIGHT: model.getGrid().getRider1().turnRight();System.out.println("1r");break;
   	case KeyEvent.VK_LEFT: model.getGrid().getRider1().turnLeft();System.out.println("1l");break;
-  	case KeyEvent.VK_D: model.getGrid().getRider1().turnRight();System.out.println("2r");break;
-  	case KeyEvent.VK_Q: model.getGrid().getRider1().turnLeft();System.out.println("2l");break;
+  	case KeyEvent.VK_D: model.getGrid().getRider2().turnRight();System.out.println("2r");break;
+  	case KeyEvent.VK_Q: model.getGrid().getRider2().turnLeft();System.out.println("2l");break;
   	default:break;
   	
   	

@@ -55,24 +55,17 @@ public class Display extends JPanel implements Observer {
 				
 				);
 		
+		
+		
+		//Rider1 particles
 		for (IElements element : model.getGrid().getRider1().getParticles()) {
 			g.setColor(model.getGrid().getRider1().getColor());
-			g.fillRect(
-					element.getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
-					element.getY()*model.getGrid().getWidth()/model.getGrid().getNbCelsHeight(), 
-					model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
-					model.getGrid().getWidth()/model.getGrid().getNbCelsHeight()
-					);
+			g.fillRect(element.getX()*10, element.getY()*10, 10, 10);
 		}
-		
+		// rider 2 particles
 		for (IElements element : model.getGrid().getRider2().getParticles()) {
 			g.setColor(model.getGrid().getRider2().getColor());
-			g.fillRect(
-					element.getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
-					element.getY()*model.getGrid().getWidth()/model.getGrid().getNbCelsHeight(), 
-					model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
-					model.getGrid().getWidth()/model.getGrid().getNbCelsHeight()
-					);
+			g.fillRect(element.getX()*10, element.getY()*10, 10, 10);
 		}
 		
 		
@@ -101,7 +94,7 @@ public class Display extends JPanel implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		this.repaint();
-		System.out.println("Update");
+		//System.out.println("Update");
 		
 	}
 
