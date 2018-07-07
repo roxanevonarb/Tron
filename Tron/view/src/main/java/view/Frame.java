@@ -3,7 +3,7 @@ package view;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
+
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -65,10 +65,10 @@ public class Frame extends JFrame implements KeyListener, IView {
 	@Override
   	public final void keyPressed(final KeyEvent keyEvent) {
   	switch(keyEvent.getKeyCode()) {
-  	case KeyEvent.VK_RIGHT: model.getGrid().getRider1().turnRight();break;
-  	case KeyEvent.VK_LEFT: model.getGrid().getRider1().turnLeft();break;
-  	case KeyEvent.VK_D: model.getGrid().getRider1().turnRight();break;
-  	case KeyEvent.VK_Q: model.getGrid().getRider1().turnLeft();break;
+  	case KeyEvent.VK_RIGHT: model.getGrid().getRider1().turnRight();System.out.println("1r");break;
+  	case KeyEvent.VK_LEFT: model.getGrid().getRider1().turnLeft();System.out.println("1l");break;
+  	case KeyEvent.VK_D: model.getGrid().getRider1().turnRight();System.out.println("2r");break;
+  	case KeyEvent.VK_Q: model.getGrid().getRider1().turnLeft();System.out.println("2l");break;
   	default:break;
   	
   	
@@ -178,6 +178,8 @@ public class Frame extends JFrame implements KeyListener, IView {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 	
 	
 	

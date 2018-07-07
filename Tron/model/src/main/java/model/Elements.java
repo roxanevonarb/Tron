@@ -1,8 +1,10 @@
 package model;
 
 import java.awt.Color;
+import java.util.Observable;
 
-public class Elements implements IElements{
+
+public class Elements extends Observable implements IElements{
 	
 	public Elements(int x, int y, Color color) {
 		this.x=x;
@@ -39,4 +41,5 @@ public class Elements implements IElements{
 	public void setColor(Color color) {
 		this.color = color;
 	}
+	
 }

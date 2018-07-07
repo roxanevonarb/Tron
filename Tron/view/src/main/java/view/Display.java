@@ -25,17 +25,56 @@ public class Display extends JPanel implements Observer {
 		System.out.println("Affichage");
 		this.model = model;
 		
-		for (IElements entity : model.getGrid().getRider1().getParticles()) {
-			((Observable) entity).addObserver(this);
-			
-		}
-		for (IElements entity : model.getGrid().getRider2().getParticles()) {
-			((Observable) entity).addObserver(this);		
-		}
+		model.getGrid().getRider1().addObserver(this);
+		model.getGrid().getRider2().addObserver(this);
+		
+		
+		
 		
 	}
 	
 	public void drawGrid(Graphics g)throws IOException, InterruptedException {
+		
+		
+		//Rider1
+		g.setColor(model.getGrid().getRider1().getColor());
+		g.fillRect(
+				model.getGrid().getRider1().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
+				model.getGrid().getRider1().getY()*model.getGrid().getHeight()/model.getGrid().getNbCelsHeight(),
+				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
+				model.getGrid().getHeight()/model.getGrid().getNbCelsHeight()
+				
+				);
+		//Rider2
+		g.setColor(model.getGrid().getRider2().getColor());
+		g.fillRect(
+				model.getGrid().getRider2().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
+				model.getGrid().getRider2().getY()*model.getGrid().getHeight()/model.getGrid().getNbCelsHeight(),
+				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
+				model.getGrid().getHeight()/model.getGrid().getNbCelsHeight()
+				
+				);
+		
+		for (IElements element : model.getGrid().getRider1().getParticles()) {
+			g.setColor(model.getGrid().getRider1().getColor());
+			g.fillRect(
+					element.getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
+					element.getY()*model.getGrid().getWidth()/model.getGrid().getNbCelsHeight(), 
+					model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
+					model.getGrid().getWidth()/model.getGrid().getNbCelsHeight()
+					);
+		}
+		
+		for (IElements element : model.getGrid().getRider2().getParticles()) {
+			g.setColor(model.getGrid().getRider2().getColor());
+			g.fillRect(
+					element.getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
+					element.getY()*model.getGrid().getWidth()/model.getGrid().getNbCelsHeight(), 
+					model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(), 
+					model.getGrid().getWidth()/model.getGrid().getNbCelsHeight()
+					);
+		}
+		
 		
 		
 	}
@@ -62,6 +101,7 @@ public class Display extends JPanel implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		this.repaint();
+		System.out.println("Update");
 		
 	}
 

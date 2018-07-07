@@ -3,7 +3,7 @@ package model;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public class Rider extends Elements implements IRider{
+public class Rider extends Elements implements IRider , IElements{
 	private Direction direction;
 	public ArrayList<IElements> particles = new ArrayList<IElements>();
 	boolean alive = true;
@@ -22,18 +22,21 @@ public Rider(int x, int y, Color color , Direction direction,Grid grid) {
 public void move() {
 	this.particles.add(0, new Particles(this.x, this.y, this.color));
 	switch(this.direction) {
-	case EST: this.setX(this.x+1);
+	case EST: this.x=x+1;
 		break;
-	case NORD: this.setY(this.y-1);
+	case NORD: this.y=y-1;
 		break;
-	case OUEST: this.setX(this.x-1);
+	case OUEST: this.x=x-1;
 		break;
-	case SUD: this.setY(this.y+1);
+	case SUD: this.y=y+1;
 		break;
 	default:
 		break;
 	}
+	
 	grid.checkColision(this);
+	this.setChanged();
+	this.notifyObservers();
 	
 }
 

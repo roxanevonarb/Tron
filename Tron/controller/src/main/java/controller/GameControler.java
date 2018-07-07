@@ -20,9 +20,18 @@ public class GameControler implements IController {
 	
 	
 	public void play(){
-		model.getGrid().getRider1().move();
-		model.getGrid().getRider2().move();
 		
+		while(true) {
+			model.getGrid().getRider1().move();
+			//model.getGrid().getRider2().move();
+			try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		
 	}
 
