@@ -23,6 +23,7 @@ public abstract class Main {
     	
     	IController game = new GameControler(model, view);
     	game.play();
+    	
     }
 
 }
