@@ -14,6 +14,13 @@ public class Rider extends Elements implements IRider , IElements{
 	boolean alive = true;
 	public Grid grid;
 
+	
+/*
+ * Constructor
+ * @param x,y,color,direction,grid
+ * 
+ * 	
+ */
 public Rider(int x, int y, Color color , Direction direction,Grid grid) {
 		super(x, y, color);
 		this.direction=direction;
@@ -23,7 +30,10 @@ public Rider(int x, int y, Color color , Direction direction,Grid grid) {
 
 
 
-
+/*
+ * (non-Javadoc)
+ * @see model.IRider#move()
+ */
 public void move() {
 	this.particles.add(0, new Particles(this.x, this.y, this.color));
 	switch(this.direction) {
@@ -48,26 +58,37 @@ public void move() {
 
 
 
-
+/*
+ * (non-Javadoc)
+ * @see model.IRider#isAlive()
+ */
 public boolean isAlive() {
 	return alive;
 }
 
 
-
-
+/*
+ * set rider alive status
+ */
 public void setAlive(boolean alive) {
 	this.alive = alive;
 }
 
 
-
+/*
+ * (non-Javadoc)
+ * @see model.IRider#getParticles()
+ */
 
 @Override
 public ArrayList<IElements> getParticles() {
 	// TODO Auto-generated method stub
 	return particles;
 }
+/*
+ * (non-Javadoc)
+ * @see model.IRider#turnRight()
+ */
 @Override
 public void turnRight() {
 	switch(this.direction) {
@@ -78,6 +99,10 @@ public void turnRight() {
 	}
 	
 }
+/*
+ * (non-Javadoc)
+ * @see model.IRider#turnLeft()
+ */
 @Override
 public void turnLeft() {
 		switch(this.direction) {

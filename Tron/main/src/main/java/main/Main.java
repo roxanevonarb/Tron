@@ -16,12 +16,15 @@ import view.IView;
 public abstract class Main {
 
     public static void main(final String[] args) {
-
+    	// on charge le model
     	final ITronModel model = new TronModel();
+    	//on set la grid
     	model.setGrid(new Grid());
+    	//on charge la cue avec la model
     	final IView view = new Frame(model);	
-    	
+    	//et on charge le controler
     	IController game = new GameControler(model, view);
+    	//on lance le jeu
     	game.play();
     	
     }

@@ -7,11 +7,18 @@ package model;
  */
 public class TronModel implements ITronModel{
 	private IGrid grid;
-
+	/*
+	 * 
+	 * (non-Javadoc)
+	 * @see model.ITronModel#getGrid()
+	 */
 	public IGrid getGrid() {
 		return grid;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.ITronModel#setGrid(model.IGrid)
+	 */
 	public void setGrid(IGrid grid) {
 		this.grid = grid;
 	}

@@ -20,7 +20,10 @@ public class Grid implements IGrid{
 	private int nbCelsWidth=60;
 	
 	
-	
+	/*
+	 * Costructor
+	 * set 2 rider on the grid
+	 */
 	public Grid () {
 		this.rider1= new Rider(2,2,Color.red,Direction.EST,this);
 		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST,this);
