@@ -32,8 +32,16 @@ public class ElementsTest {
 		 * 
 		 *
 		 */
+		@Test
 		public void testgetColor() {
 			Color expected = Color.red;
+			assertEquals(expected,element.getColor());
+			
+		} 
+		@Test
+		public void testsetColor() {
+			Color expected = Color.blue;
+			element.setColor(Color.blue);
 			assertEquals(expected,element.getColor());
 			
 		} 
