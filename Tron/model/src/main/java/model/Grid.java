@@ -29,7 +29,13 @@ public class Grid implements IGrid{
 		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST,this);
 	}
 	
-	
+	/*
+	 * Check colision for a rider
+	 * checkif rider is in colision
+	 * @param rider
+	 * @return boolean colision
+	 * 
+	 */
 	public boolean checkColision(Rider rider) {
 		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCelsHeight) {rider.setAlive(false); return true;} 
 		
@@ -44,47 +50,70 @@ public class Grid implements IGrid{
 		return false;
 	
 }
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getRider1()
+	 */
 	@Override
 	public IRider getRider1() {
 		return rider1;
 	}
 
-	
+	/*
+	 * Set rider 1
+	 */
 	public void setRider1(Rider rider1) {
 		this.rider1 = rider1;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getRider2()
+	 */
 	@Override
 	public IRider getRider2() {
 		return rider2;
 	}
 
-
+	/*
+	 * Set rider 2
+	 */
 	public void setRider2(Rider rider2) {
 		this.rider2 = rider2;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getWidth()
+	 */
 	@Override
 	public int getWidth() {
 		return width;
 	}
 
-
+	/*
+	 * Set the width
+	 */
 	public void setWidth(int width) {
 		this.width = width;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getHeight()
+	 */
 	@Override
 	public int getHeight() {
 		return height;
 	}
 
-
+	/*
+	 * set the height in pixels of the grid
+	 */
 	public void setHeight(int height) {
 		this.height = height;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getNbCelsHeight()
+	 */
 	@Override
 	public int getNbCelsHeight() {
 		return nbCelsHeight;
@@ -94,7 +123,10 @@ public class Grid implements IGrid{
 	public void setNbCelsHeight(int nbCelsHeight) {
 		this.nbCelsHeight = nbCelsHeight;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see model.IGrid#getNbCelsWidth()
+	 */
 	@Override
 	public int getNbCelsWidth() {
 		return nbCelsWidth;
