@@ -1,6 +1,6 @@
 package main;
 /**
- * <h1>The Enumeration Main</h1>
+ * <h1>The  Main Class</h1>
  * 
  * @author Arthur-Michel
  * @version 1.0

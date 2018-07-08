@@ -7,7 +7,11 @@ package controller;
  * @version 1.0
  */
 public interface IController {
-
+	/*
+	 * Play the game using model and view
+	 * 
+	 * 
+	 */
 	void play();
 
 }

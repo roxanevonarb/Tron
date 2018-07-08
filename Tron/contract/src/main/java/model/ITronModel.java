@@ -6,7 +6,12 @@ package model;
  * @version 1.0
  */
 public interface ITronModel {
-
+	/*
+	 * get the grid
+	 */
 	public IGrid getGrid();
+	/*
+	 * set the grid
+	 */
 	public void setGrid(IGrid grid);
 }
