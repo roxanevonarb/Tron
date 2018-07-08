@@ -1,5 +1,10 @@
 package view;
-
+/**
+ * <h1>The Frame Class</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;

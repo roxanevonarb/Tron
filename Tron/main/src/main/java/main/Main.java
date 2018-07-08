@@ -1,5 +1,10 @@
 package main;
-
+/**
+ * <h1>The Enumeration Main</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import controller.GameControler;
 import controller.IController;
 import model.Grid;

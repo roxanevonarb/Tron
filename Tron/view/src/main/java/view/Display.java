@@ -1,5 +1,10 @@
 package view;
-
+/**
+ * <h1>The Display class</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import java.awt.Color;
 import java.awt.Graphics;
 import java.io.IOException;

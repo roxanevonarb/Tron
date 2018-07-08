@@ -1,5 +1,10 @@
 package model;
-
+/**
+ * <h1>The Rider (lightcycle) Interface</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import java.util.ArrayList;
 
 public interface IRider extends IElements{

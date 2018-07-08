@@ -1,5 +1,10 @@
 package model;
-
+/**
+ * <h1>The  Element Interface</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import java.awt.Color;
 import java.util.Observer;
 

@@ -1,5 +1,10 @@
 package controller;
-
+/**
+ * <h1>The Contrller Class</h1>
+ * 
+ * @author Arthur-Michel
+ * @version 1.0
+ */
 import model.ITronModel;
 import view.IView;
 
