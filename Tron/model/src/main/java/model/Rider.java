@@ -2,7 +2,7 @@ package model;
 /**
  * <h1>The Biker Cless</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import java.awt.Color;
@@ -15,7 +15,7 @@ public class Rider extends Elements implements IRider , IElements{
 	public Grid grid;
 
 	
-/*
+/**
  * Constructor
  * @param x,y,color,direction,grid
  * 
@@ -30,7 +30,7 @@ public Rider(int x, int y, Color color , Direction direction,Grid grid) {
 
 
 
-/*
+/**
  * (non-Javadoc)
  * @see model.IRider#move()
  */
@@ -58,7 +58,7 @@ public void move() {
 
 
 
-/*
+/**
  * (non-Javadoc)
  * @see model.IRider#isAlive()
  */
@@ -67,7 +67,7 @@ public boolean isAlive() {
 }
 
 
-/*
+/**
  * set rider alive status
  */
 public void setAlive(boolean alive) {
@@ -75,7 +75,7 @@ public void setAlive(boolean alive) {
 }
 
 
-/*
+/**
  * (non-Javadoc)
  * @see model.IRider#getParticles()
  */
@@ -85,7 +85,7 @@ public ArrayList<IElements> getParticles() {
 	// TODO Auto-generated method stub
 	return particles;
 }
-/*
+/**
  * (non-Javadoc)
  * @see model.IRider#turnRight()
  */
@@ -99,7 +99,7 @@ public void turnRight() {
 	}
 	
 }
-/*
+/**
  * (non-Javadoc)
  * @see model.IRider#turnLeft()
  */

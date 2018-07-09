@@ -2,7 +2,7 @@ package main;
 /**
  * <h1>The  Main Class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import controller.GameControler;

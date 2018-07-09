@@ -3,7 +3,7 @@ package controller;
 /**
  * <h1>The Contrller Class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import model.ITronModel;
@@ -14,7 +14,7 @@ public class GameControler implements IController {
 	IView view ;
 	ITronModel model;
 	
-	/*
+	/**
 	 * Constructor
 	 * @param Model , View
 	 * 
@@ -28,7 +28,7 @@ public class GameControler implements IController {
 		
 	}
 	
-	/*
+	/**
 	 * play the game
 	 * 
 	 * 

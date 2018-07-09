@@ -2,7 +2,7 @@ package view;
 /**
  * <h1>The Display class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import java.awt.Color;

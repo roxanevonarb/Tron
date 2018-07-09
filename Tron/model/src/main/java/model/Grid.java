@@ -2,7 +2,7 @@ package model;
 /**
  * <h1>The Grid Class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 
@@ -39,7 +39,7 @@ public class Grid implements IGrid{
 		timer.start();
 	}
 	
-	/*
+	/**
 	 * Check colision for a rider
 	 * checkif rider is in colision
 	 * @param rider
@@ -60,7 +60,7 @@ public class Grid implements IGrid{
 		return false;
 	
 }
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getRider1()
 	 */
@@ -69,13 +69,13 @@ public class Grid implements IGrid{
 		return rider1;
 	}
 
-	/*
+	/**
 	 * Set rider 1
 	 */
 	public void setRider1(Rider rider1) {
 		this.rider1 = rider1;
 	}
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getRider2()
 	 */
@@ -84,13 +84,13 @@ public class Grid implements IGrid{
 		return rider2;
 	}
 
-	/*
+	/**
 	 * Set rider 2
 	 */
 	public void setRider2(Rider rider2) {
 		this.rider2 = rider2;
 	}
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getWidth()
 	 */
@@ -99,13 +99,13 @@ public class Grid implements IGrid{
 		return width;
 	}
 
-	/*
+	/**
 	 * Set the width
 	 */
 	public void setWidth(int width) {
 		this.width = width;
 	}
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getHeight()
 	 */
@@ -114,13 +114,13 @@ public class Grid implements IGrid{
 		return height;
 	}
 
-	/*
+	/**
 	 * set the height in pixels of the grid
 	 */
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getNbCelsHeight()
 	 */
@@ -133,7 +133,7 @@ public class Grid implements IGrid{
 	public void setNbCelsHeight(int nbCelsHeight) {
 		this.nbCelsHeight = nbCelsHeight;
 	}
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see model.IGrid#getNbCelsWidth()
 	 */

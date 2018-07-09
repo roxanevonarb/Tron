@@ -2,7 +2,7 @@ package view;
 /**
  * <h1>The Frame Class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import java.awt.event.KeyEvent;
@@ -63,7 +63,7 @@ public class Frame extends JFrame implements KeyListener, IView {
 
 
 
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
 	 */
@@ -164,7 +164,7 @@ public class Frame extends JFrame implements KeyListener, IView {
 	}
 
 
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see view.IView#displayMessage
 	 */
@@ -174,7 +174,7 @@ public class Frame extends JFrame implements KeyListener, IView {
 		this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));	
 	}
 
-	/*
+	/**
 	 * (non-Javadoc)
 	 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
 	 */

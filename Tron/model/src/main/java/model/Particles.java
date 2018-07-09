@@ -2,13 +2,13 @@ package model;
 /**
  * <h1>The Particles Class</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 import java.awt.Color;
 
 public class Particles extends Elements{
-	/*
+	/**
 	 * Construcotr particles
 	 * @param x,y,color
 	 */

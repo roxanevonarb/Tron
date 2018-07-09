@@ -3,7 +3,7 @@ package model;
 /**
  * <h1>The Enumeration Direction</h1>
  * 
- * @author Arthur-Michel
+ * @author Roxane-Vonarb
  * @version 1.0
  */
 
