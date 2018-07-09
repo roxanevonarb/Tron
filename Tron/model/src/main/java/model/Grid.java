@@ -9,6 +9,8 @@ package model;
 
 import java.awt.Color;
 
+import DAO.Datamanager;
+
 
 
 public class Grid implements IGrid{
@@ -21,6 +23,8 @@ public class Grid implements IGrid{
 	private int nbCelsHeight=40;
 	private int nbCelsWidth=60;
 	private ITimer timer;
+	private Datamanager db = new Datamanager();
+
 	
 	
 
@@ -146,14 +150,27 @@ public class Grid implements IGrid{
 	public ITimer getTimer() {
 		return timer;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Override
+	public void save() {
+		
+		if(rider1.isAlive()) {
+			db.save(2, (int) timer.getTime());}
+		else {
+			db.save(1, (int) timer.getTime());}
+		}
+		
+
 }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

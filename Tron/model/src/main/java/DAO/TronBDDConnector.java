@@ -7,13 +7,15 @@
 	import java.sql.SQLException;
 	import java.sql.Statement;
 
+import model.ITronBDDConector;
+
 	/**
 	 * <h1>The Class LoranBDDConnector.</h1>
 	 *
 	 * @author Arthur-Michel
 	 * @version 1.0
 	 */
-	final class TronBDDConnector {
+	final class TronBDDConnector implements ITronBDDConector{
 
 	 /** The instance. */
 	 private static TronBDDConnector instance;
@@ -42,9 +44,9 @@
 	 }
 
 	 /**
-	 * Gets the single instance of BoulderDashBDDConnector.
+	 * Gets the single instance of TronBDDConnector.
 	 *
-	 * @return single instance of BoulderDashBDDConnector
+	 * @return single instance of TronBDDConnector
 	 */
 	 public static TronBDDConnector getInstance() {
 	 if (instance == null) {
@@ -72,18 +74,18 @@
 	 * @return true, if successful
 	 */
 	 private boolean open() {
-	 try {
-	 this.connection = DriverManager.getConnection(TronBDDConnector.url, TronBDDConnector.user,
-	 TronBDDConnector.password);
-	 this.statement = this.connection.createStatement();
-	 return true;
-	 
-	 } catch (final SQLException exception) {
-	 exception.printStackTrace();
-	 
-	 }
-	 return false;
-	 
+		 try {
+			 this.connection = DriverManager.getConnection(TronBDDConnector.url, TronBDDConnector.user,
+			 TronBDDConnector.password);
+			 this.statement = this.connection.createStatement();
+			 return true;
+		 
+		 } catch (final SQLException exception) {
+		 exception.printStackTrace();
+		 
+		 }
+		 return false;
+		 
 	 }
 
 	 /**
@@ -95,7 +97,7 @@
 	 */
 	 public ResultSet executeQuery(final String query) {
 	 try {
-	 return this.getStatement().executeQuery(query);
+		 return this.getStatement().executeQuery(query);
 	 
 	 } catch (final SQLException e) {
 	 e.printStackTrace();
@@ -133,7 +135,7 @@
 	 */
 	 public int executeUpdate(final String query) {
 	 try {
-	 return this.statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+		 return this.statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
 	 
 	 } catch (final SQLException e) {
 	 e.printStackTrace();
@@ -149,7 +151,7 @@
 	 * @return the connection
 	 */
 	 private Connection getConnection() {
-	 return this.connection;
+		 return this.connection;
 	 
 	 }
 
@@ -160,7 +162,7 @@
 	 * the new connection
 	 */
 	 public void setConnection(final Connection connection) {
-	 this.connection = connection;
+		 this.connection = connection;
 	 
 	 }
 
@@ -170,7 +172,7 @@
 	 * @return the statement
 	 */
 	 private Statement getStatement() {
-	 return this.statement;
+		 return this.statement;
 	 
 	 }
 
@@ -181,7 +183,7 @@
 	 * the new statement
 	 */
 	 public void setStatement(final Statement statement) {
-	 this.statement = statement;
+		 this.statement = statement;
 	 
 	 }
 

@@ -37,5 +37,8 @@ public interface IGrid {
 	public ITimer getTimer();
 	
 	
+	public void save();
+	
+	
 
 }
