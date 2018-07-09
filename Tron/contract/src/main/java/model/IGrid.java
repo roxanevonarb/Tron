@@ -1,4 +1,7 @@
 package model;
+
+
+
 /**
  * <h1>The Grid Interface</h1>
  * 
@@ -32,5 +35,7 @@ public interface IGrid {
 	public IRider getRider2();
 	
 	public ITimer getTimer();
+	
+	
 
 }

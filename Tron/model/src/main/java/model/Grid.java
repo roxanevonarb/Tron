@@ -9,6 +9,8 @@ package model;
 
 import java.awt.Color;
 
+
+
 public class Grid implements IGrid{
 	
 	
@@ -21,7 +23,8 @@ public class Grid implements IGrid{
 	private ITimer timer;
 	
 	
-	/*
+
+	/**
 	 * Costructor
 	 * set 2 rider on the grid
 	 */

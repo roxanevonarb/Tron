@@ -1,4 +1,5 @@
 package controller;
+import model.IDataManager;
 /**
  * <h1>The Contrller Class</h1>
  * 
@@ -12,6 +13,7 @@ public class GameControler implements IController {
 	
 	IView view ;
 	ITronModel model;
+	
 	/*
 	 * Constructor
 	 * @param Model , View
@@ -44,6 +46,7 @@ public class GameControler implements IController {
 			if(model.getGrid().getRider1().isAlive() == false) {
 				//on affiche le message
 				model.getGrid().getTimer().stop();
+				
 				this.view.displayMessage("Rider 2 Win (Blue) Win in "+model.getGrid().getTimer().getTime()+" Seconds");
 			}
 			
@@ -53,6 +56,7 @@ public class GameControler implements IController {
 			model.getGrid().getRider2().move();
 			if(model.getGrid().getRider2().isAlive() == false) {
 				model.getGrid().getTimer().stop();
+				
 				this.view.displayMessage("Rider 1 Win (Red) Win in"+model.getGrid().getTimer().getTime()+" Seconds");
 			
 			}
