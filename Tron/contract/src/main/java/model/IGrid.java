@@ -30,5 +30,7 @@ public interface IGrid {
 	 * Get the rider 2
 	 */
 	public IRider getRider2();
+	
+	public ITimer getTimer();
 
 }

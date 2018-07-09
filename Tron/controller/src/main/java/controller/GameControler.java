@@ -41,16 +41,23 @@ public class GameControler implements IController {
 			//on bouge le rider 1
 			model.getGrid().getRider1().move();
 			//si il est mort 
-			if(model.getGrid().getRider1().isAlive() == false)
+			if(model.getGrid().getRider1().isAlive() == false) {
 				//on affiche le message
-				this.view.displayMessage("Rider 2 Win (Blue)");
+				model.getGrid().getTimer().stop();
+				this.view.displayMessage("Rider 2 Win (Blue)"+model.getGrid().getTimer().getTime()+" Seconds");
+			}
 			
 			
 			
 			// pareil pour le rider 2
 			model.getGrid().getRider2().move();
-			if(model.getGrid().getRider2().isAlive() == false)
-				this.view.displayMessage("Rider 1 Win (Red) ");
+			if(model.getGrid().getRider2().isAlive() == false) {
+				model.getGrid().getTimer().stop();
+				this.view.displayMessage("Rider 1 Win (Red) "+model.getGrid().getTimer().getTime()+" Seconds");
+			
+			}
+			
+			
 			try {
 				//Boucle de temps de jeu
 				Thread.sleep(150);

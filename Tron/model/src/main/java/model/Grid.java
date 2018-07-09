@@ -18,6 +18,7 @@ public class Grid implements IGrid{
 	private int height = 400;
 	private int nbCelsHeight=40;
 	private int nbCelsWidth=60;
+	private ITimer timer;
 	
 	
 	/*
@@ -27,6 +28,8 @@ public class Grid implements IGrid{
 	public Grid () {
 		this.rider1= new Rider(2,2,Color.red,Direction.EST,this);
 		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST,this);
+		this.timer= new timer();
+		timer.start();
 	}
 	
 	/*
@@ -136,6 +139,11 @@ public class Grid implements IGrid{
 	public void setNbCelsWidth(int nbCelsWidth) {
 		this.nbCelsWidth = nbCelsWidth;
 	}
+	@Override
+	public ITimer getTimer() {
+		return timer;
+	}
+	
 	
 	
 	
