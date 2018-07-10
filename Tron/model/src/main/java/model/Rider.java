@@ -34,6 +34,8 @@ public Rider(int x, int y, Color color , Direction direction,Grid grid) {
  * (non-Javadoc)
  * @see model.IRider#move()
  */
+	
+	//definition des differents mouvement possibles 
 public void move() {
 	this.particles.add(0, new Particles(this.x, this.y, this.color));
 	switch(this.direction) {
